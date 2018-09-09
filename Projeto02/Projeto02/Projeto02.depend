@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1536457870 source:/home/julio/Documents/CodeBlocks/Projeto02/main.cpp
+	<iostream>
+
+1536462310 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Apartamento.cpp
+	"Apartamento.h"
+
+1536461839 /home/julio/Documents/CodeBlocks/Projeto02/include/Apartamento.h
+	"Imovel.h"
+
+1536458002 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Casa.cpp
+	"Casa.h"
+
+1536458001 /home/julio/Documents/CodeBlocks/Projeto02/include/Casa.h
+
+1536461089 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Endereco.cpp
+	"Endereco.h"
+
+1536459129 /home/julio/Documents/CodeBlocks/Projeto02/include/Endereco.h
+	<string>
+
+1536515158 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Imovel.cpp
+	"Imovel.h"
+	"Apartamento.h"
+
+1536463178 /home/julio/Documents/CodeBlocks/Projeto02/include/Imovel.h
+	"Endereco.h"
+	<string>
+	<sstream>
+
+1536458040 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Terreno.cpp
+	"Terreno.h"
+
+1536458040 /home/julio/Documents/CodeBlocks/Projeto02/include/Terreno.h
+
+1536460649 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Util.cpp
+	"Util.h"
+
+1536517463 /home/julio/Documents/CodeBlocks/Projeto02/include/Util.h
+	"Imovel.h"
+	<string>
+
