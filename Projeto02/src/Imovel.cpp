@@ -37,25 +37,16 @@ int Imovel::getTipoDeferta(){
     return tipoDeOferta;
 }
 
+std::string Imovel::setDescricao(std::string descricao){
+    this->descricao = descricao;
+}
+
 Endereco Imovel::getEndereco(){
     return endereco;
 }
 
 std::string Imovel::getDescricao(){
-    if(tipoDeOferta == 1){
-        Apartamento apt = Apartamento();
-        std::stringstream areaSt;
-        areaSt<<apt.getArea();
-        std::stringstream numQuartos;
-        numQuartos<<apt.getNumDeQuartos();
-        std::stringstream vagasGaragem;
-        vagasGaragem<<apt.getVagasGaragem();
-        std::stringstream valorCondominio;
-        valorCondominio<<apt.getValorCondominio();
-        std::string retorno = "" + areaSt.str() + "\n" + numQuartos.str() + "\n" + vagasGaragem.str() + "\n" + valorCondominio.str();
-        return retorno;
-    }
-    return "";
+    return descricao;
 }
 
 Imovel::~Imovel()

@@ -21,11 +21,13 @@ class Imovel
         int getTipoDeferta();
         Endereco getEndereco();
         std::string getDescricao();
+        std::string setDescricao(std::string descricao);
 
     protected:
         int imovelTipo;
         double valor;
         int tipoDeOferta;
+        std::string descricao;
         Endereco endereco;
 
     private:
