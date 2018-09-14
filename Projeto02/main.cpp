@@ -3,6 +3,7 @@
 #include "Imovel.h"
 #include "SistemaImobiliaria.h"
 #include "Endereco.h"
+#include <list>
 
 using namespace std;
 
@@ -33,5 +34,9 @@ int main()
 
     cout << "Hello world!" << endl;
     ut.getGerenciadorPersistencia().salvarImovel(apt);
+    list<Imovel*> lista = ut.getGerenciadorPersistencia().recuperaListaImoveis();
+    for(Imovel* im:lista){
+        cout<<im->getDescricao() << "\n" <<endl;
+    }
     return 0;
 }

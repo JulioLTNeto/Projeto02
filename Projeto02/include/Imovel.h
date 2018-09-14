@@ -19,6 +19,7 @@ class Imovel
         double getValor();
         int getTipoDeferta();
         Endereco getEndereco();
+        void setDescricao(std::string descricao);
         virtual void setDescricao()=0;
         virtual std::string getDescricao() = 0;
 

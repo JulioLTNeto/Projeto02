@@ -2,6 +2,8 @@
 #define GERENCIADORPERSISTENCIA_H
 
 #include "Imovel.h"
+#include <string>
+#include <list>
 
 class GerenciadorPersistencia
 {
@@ -9,6 +11,7 @@ class GerenciadorPersistencia
         GerenciadorPersistencia();
         virtual ~GerenciadorPersistencia();
         void salvarImovel(Imovel *imovel);
+        std::list<Imovel*> recuperaListaImoveis();
 
     protected:
 

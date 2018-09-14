@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1536777105 source:/home/julio/Documents/CodeBlocks/Projeto02/main.cpp
+1536951666 source:/home/julio/Documents/CodeBlocks/Projeto02/main.cpp
 	<iostream>
 	"Apartamento.h"
 	"Imovel.h"
 	"SistemaImobiliaria.h"
 	"Endereco.h"
+	<list>
 
 1536771703 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Apartamento.cpp
 	"Apartamento.h"
@@ -26,11 +27,11 @@
 1536459129 /home/julio/Documents/CodeBlocks/Projeto02/include/Endereco.h
 	<string>
 
-1536771651 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Imovel.cpp
+1536949460 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Imovel.cpp
 	"Imovel.h"
 	"Apartamento.h"
 
-1536772009 /home/julio/Documents/CodeBlocks/Projeto02/include/Imovel.h
+1536949466 /home/julio/Documents/CodeBlocks/Projeto02/include/Imovel.h
 	"Endereco.h"
 	<string>
 
@@ -52,13 +53,21 @@
 	<list>
 	"GerenciadorPersistencia.h"
 
-1536712158 source:/home/julio/Documents/CodeBlocks/Projeto02/src/GerenciadorPersistencia.cpp
+1536950960 source:/home/julio/Documents/CodeBlocks/Projeto02/src/GerenciadorPersistencia.cpp
 	"GerenciadorPersistencia.h"
+	<fstream>
+	"Endereco.h"
+	"Apartamento.h"
+	"Casa.h"
+	"Terreno.h"
+	<stdlib.h>
 
-1536777122 /home/julio/Documents/CodeBlocks/Projeto02/include/GerenciadorPersistencia.h
+1536950953 /home/julio/Documents/CodeBlocks/Projeto02/include/GerenciadorPersistencia.h
 	"Imovel.h"
+	<string>
+	<list>
 
-1536770402 source:/home/julio/Documents/CodeBlocks/Projeto02/src/SistemaImobiliaria.cpp
+1536776982 source:/home/julio/Documents/CodeBlocks/Projeto02/src/SistemaImobiliaria.cpp
 	"SistemaImobiliaria.h"
 	"fstream"
 
