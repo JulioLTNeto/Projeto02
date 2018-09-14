@@ -1,4 +1,5 @@
 #include "Apartamento.h"
+#include <iostream>
 
 Apartamento::Apartamento()
 {
@@ -21,7 +22,7 @@ void Apartamento::setValorCondominio(double valorCondominio){
     this->valorCondominio = valorCondominio;
 }
 
-void Apartamento::setVagasGaragen(int vagasGaragem){
+void Apartamento::setVagasGaragem(int vagasGaragem){
     this->vagasGaragem = vagasGaragem;
 }
 
@@ -35,6 +36,22 @@ std::string Apartamento::getPosicao(){
 
 int Apartamento::getNumDeQuartos(){
     return numDeQuartos;
+}
+
+std::string Apartamento::getDescricao(){
+    return descricao;
+}
+
+void Apartamento::setDescricao(){
+    std::stringstream numD;
+    std::stringstream valorC;
+    std::stringstream vagasG;
+    std::stringstream areaD;
+    numD << numDeQuartos;
+    valorC<<valorCondominio;
+    vagasG<<vagasGaragem;
+    areaD<<area;
+    descricao = posicao + "/" + numD.str() + "/" + valorC.str() + "/" + vagasG.str() + "/" + areaD.str();
 }
 
 double Apartamento::getValorCondominio(){

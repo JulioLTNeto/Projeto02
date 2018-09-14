@@ -3,7 +3,6 @@
 
 #include "Endereco.h"
 #include <string>
-#include <sstream>
 
 class Imovel
 {
@@ -20,8 +19,8 @@ class Imovel
         double getValor();
         int getTipoDeferta();
         Endereco getEndereco();
-        std::string getDescricao();
-        std::string setDescricao(std::string descricao);
+        virtual void setDescricao()=0;
+        virtual std::string getDescricao() = 0;
 
     protected:
         int imovelTipo;

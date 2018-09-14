@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Util.h"
 #include "Apartamento.h"
 #include "Imovel.h"
+#include "SistemaImobiliaria.h"
 #include "Endereco.h"
 
 using namespace std;
@@ -14,16 +14,24 @@ int main()
     ende.setCidade("JP");
     ende.setLogradouro("Num sei");
     ende.setNumero(406);
-    Util ut = Util();
+    SistemaImobiliaria ut = SistemaImobiliaria();
+    Apartamento a = Apartamento();
     Imovel *apt = new Apartamento();
 
-    apt->setDescricao("Desc");
-    apt->setEndereco(ende);
-    apt->setImovelTipo(1);
-    apt->setTipoOferta(1);
-    apt->setValor(66);
+    a.setEndereco(ende);
+    a.setImovelTipo(1);
+    a.setTipoOferta(1);
+    a.setValor(66);
+    a.setValorCondominio(88);
+    a.setArea(66);
+    a.setVagasGaragem(6);
+    a.setNumDeQuartos(6);
+    a.setPosicao("LESTE");
+    a.setDescricao();
+
+    *apt = a;
 
     cout << "Hello world!" << endl;
-    ut.cadastrarImovel(*apt);
+    ut.getGerenciadorPersistencia().salvarImovel(apt);
     return 0;
 }

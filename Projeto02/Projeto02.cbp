@@ -37,16 +37,19 @@
 		<Unit filename="include/Apartamento.h" />
 		<Unit filename="include/Casa.h" />
 		<Unit filename="include/Endereco.h" />
+		<Unit filename="include/GerenciadorPersistencia.h" />
 		<Unit filename="include/Imovel.h" />
+		<Unit filename="include/Imvel.h" />
+		<Unit filename="include/SistemaImobiliaria.h" />
 		<Unit filename="include/Terreno.h" />
-		<Unit filename="include/Util.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Apartamento.cpp" />
 		<Unit filename="src/Casa.cpp" />
 		<Unit filename="src/Endereco.cpp" />
+		<Unit filename="src/GerenciadorPersistencia.cpp" />
 		<Unit filename="src/Imovel.cpp" />
+		<Unit filename="src/SistemaImobiliaria.cpp" />
 		<Unit filename="src/Terreno.cpp" />
-		<Unit filename="src/Util.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

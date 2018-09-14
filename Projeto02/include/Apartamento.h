@@ -2,6 +2,8 @@
 #define APARTAMENTO_H
 
 #include "Imovel.h"
+#include <string>
+#include <sstream>
 
 class Apartamento : public Imovel
 {
@@ -12,14 +14,16 @@ class Apartamento : public Imovel
         void setPosicao(std::string posicao);
         void setNumDeQuartos(int numDeQuartos);
         void setValorCondominio(double valorCondominio);
-        void setVagasGaragen(int vagasGaragem);
+        void setVagasGaragem(int vagastGaragem);
         void setArea(double area);
 
         std::string getPosicao();
+        void setDescricao();
         int getNumDeQuartos();
         double getValorCondominio();
         int getVagasGaragem();
         double getArea();
+        std::string getDescricao();
 
     protected:
 

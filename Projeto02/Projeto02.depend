@@ -1,16 +1,19 @@
 # depslib dependency file v1.0
-1536521164 source:/home/julio/Documents/CodeBlocks/Projeto02/main.cpp
+1536777105 source:/home/julio/Documents/CodeBlocks/Projeto02/main.cpp
 	<iostream>
-	"Util.h"
 	"Apartamento.h"
 	"Imovel.h"
+	"SistemaImobiliaria.h"
 	"Endereco.h"
 
-1536462310 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Apartamento.cpp
+1536771703 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Apartamento.cpp
 	"Apartamento.h"
+	<iostream>
 
-1536461839 /home/julio/Documents/CodeBlocks/Projeto02/include/Apartamento.h
+1536776488 /home/julio/Documents/CodeBlocks/Projeto02/include/Apartamento.h
 	"Imovel.h"
+	<string>
+	<sstream>
 
 1536458002 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Casa.cpp
 	"Casa.h"
@@ -23,25 +26,39 @@
 1536459129 /home/julio/Documents/CodeBlocks/Projeto02/include/Endereco.h
 	<string>
 
-1536520934 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Imovel.cpp
+1536771651 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Imovel.cpp
 	"Imovel.h"
 	"Apartamento.h"
 
-1536520631 /home/julio/Documents/CodeBlocks/Projeto02/include/Imovel.h
+1536772009 /home/julio/Documents/CodeBlocks/Projeto02/include/Imovel.h
 	"Endereco.h"
 	<string>
-	<sstream>
 
 1536458040 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Terreno.cpp
 	"Terreno.h"
 
 1536458040 /home/julio/Documents/CodeBlocks/Projeto02/include/Terreno.h
 
-1536544779 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Util.cpp
+1536591026 source:/home/julio/Documents/CodeBlocks/Projeto02/src/Util.cpp
 	"Util.h"
 	<fstream>
 
 1536517463 /home/julio/Documents/CodeBlocks/Projeto02/include/Util.h
 	"Imovel.h"
 	<string>
+
+1536777483 /home/julio/Documents/CodeBlocks/Projeto02/include/SistemaImobiliaria.h
+	"Imovel.h"
+	<list>
+	"GerenciadorPersistencia.h"
+
+1536712158 source:/home/julio/Documents/CodeBlocks/Projeto02/src/GerenciadorPersistencia.cpp
+	"GerenciadorPersistencia.h"
+
+1536777122 /home/julio/Documents/CodeBlocks/Projeto02/include/GerenciadorPersistencia.h
+	"Imovel.h"
+
+1536770402 source:/home/julio/Documents/CodeBlocks/Projeto02/src/SistemaImobiliaria.cpp
+	"SistemaImobiliaria.h"
+	"fstream"
 

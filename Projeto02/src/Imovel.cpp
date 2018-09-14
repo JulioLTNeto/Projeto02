@@ -37,16 +37,8 @@ int Imovel::getTipoDeferta(){
     return tipoDeOferta;
 }
 
-std::string Imovel::setDescricao(std::string descricao){
-    this->descricao = descricao;
-}
-
 Endereco Imovel::getEndereco(){
     return endereco;
-}
-
-std::string Imovel::getDescricao(){
-    return descricao;
 }
 
 Imovel::~Imovel()
