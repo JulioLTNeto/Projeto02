@@ -13,18 +13,22 @@ GerenciadorPersistencia::GerenciadorPersistencia()
     //ctor
 }
 
-void GerenciadorPersistencia::salvarImovel(Imovel *imovel){
+void GerenciadorPersistencia::salvarImovel(list<Imovel*> lista){
     ofstream arq;
-    arq.open("imovel.txt", ios::app);
-    arq <<imovel->getDescricao() << "\n";
-    arq<<imovel->getEndereco().getBairro() << "\n";
-    arq<<imovel->getEndereco().getCep() << "\n";
-    arq<<imovel->getEndereco().getCidade() << "\n";
-    arq<<imovel->getEndereco().getLogradouro() << "\n";
-    arq<<imovel->getEndereco().getNumero() << "\n";
-    arq<<imovel->getImovelTipo() << "\n";
-    arq<<imovel->getTipoDeferta() << "\n";
-    arq<<imovel->getValor() << "\n";
+    arq.open("imovel.txt");
+
+    for(Imovel *imovel:lista){
+        arq<<imovel->getDescricao() << "\n";
+        arq<<imovel->getEndereco().getBairro() << "\n";
+        arq<<imovel->getEndereco().getCep() << "\n";
+        arq<<imovel->getEndereco().getCidade() << "\n";
+        arq<<imovel->getEndereco().getLogradouro() << "\n";
+        arq<<imovel->getEndereco().getNumero() << "\n";
+        arq<<imovel->getImovelTipo() << "\n";
+        arq<<imovel->getTipoDeferta() << "\n";
+        arq<<imovel->getValor() << "\n";
+     }
+
     arq.close();
 }
 
@@ -71,7 +75,7 @@ list<Imovel*> GerenciadorPersistencia::recuperaListaImoveis(){
         int n;
         int tI;
         int tO;
-        int v;
+        double v;
 
         stringstream num(numero);
         num>>n;

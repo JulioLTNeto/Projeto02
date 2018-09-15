@@ -10,7 +10,7 @@ class GerenciadorPersistencia
     public:
         GerenciadorPersistencia();
         virtual ~GerenciadorPersistencia();
-        void salvarImovel(Imovel *imovel);
+        void salvarImovel(std::list<Imovel*> lista);
         std::list<Imovel*> recuperaListaImoveis();
 
     protected:

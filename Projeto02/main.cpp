@@ -22,18 +22,18 @@ int main()
     a.setEndereco(ende);
     a.setImovelTipo(1);
     a.setTipoOferta(1);
-    a.setValor(66);
+    a.setValor(40);
     a.setValorCondominio(88);
     a.setArea(66);
     a.setVagasGaragem(6);
     a.setNumDeQuartos(6);
-    a.setPosicao("LESTE");
+    a.setPosicao("SUL");
     a.setDescricao();
 
     *apt = a;
 
     cout << "Hello world!" << endl;
-    ut.getGerenciadorPersistencia().salvarImovel(apt);
+    //ut.getGerenciadorPersistencia().salvarImovel(apt);
     list<Imovel*> lista = ut.getGerenciadorPersistencia().recuperaListaImoveis();
     for(Imovel* im:lista){
         cout<<im->getDescricao() << "\n" <<endl;

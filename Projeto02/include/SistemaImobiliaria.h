@@ -11,12 +11,13 @@ class SistemaImobiliaria
         SistemaImobiliaria();
         virtual ~SistemaImobiliaria();
         void cadastrarImovel(Imovel *imovel);
+        std::list<Imovel*> getImoveis();
         GerenciadorPersistencia getGerenciadorPersistencia();
 
     protected:
 
     private:
-        std::list<Imovel*> imovel;
+        std::list<Imovel*> lista;
         GerenciadorPersistencia gerenciador;
 };
 
