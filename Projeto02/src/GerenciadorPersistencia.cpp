@@ -5,6 +5,7 @@
 #include "Casa.h"
 #include "Terreno.h"
 #include <stdlib.h>
+#include <iostream>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ GerenciadorPersistencia::GerenciadorPersistencia()
 void GerenciadorPersistencia::salvarImovel(list<Imovel*> lista){
     ofstream arq;
     arq.open("imovel.txt");
-
+    int totalCadastrados = 0;
     for(Imovel *imovel:lista){
         arq<<imovel->getDescricao() << "\n";
         arq<<imovel->getTitulo() << "\n";
@@ -28,18 +29,35 @@ void GerenciadorPersistencia::salvarImovel(list<Imovel*> lista){
         arq<<imovel->getImovelTipo() << "\n";
         arq<<imovel->getTipoDeferta() << "\n";
         arq<<imovel->getValor() << "\n";
+        totalCadastrados++;
      }
-
     arq.close();
+    ofstream conf;
+    conf.open("imovel_Cfg.txt", ios::app);
+    conf<<totalCadastrados;
+    conf.close();
 }
 
 list<Imovel*> GerenciadorPersistencia::recuperaListaImoveis(){
+    ifstream arqCfg;
+    arqCfg.open("imovel_Cfg.txt");
+
+    int totalInt;
+    string total;
+
+    getline(arqCfg, total);
+    stringstream totalStream(total);
+    totalStream>>totalInt;
+
     list<Imovel*> imoveis;
     ifstream arquivo;
     arquivo.open("imovel.txt");
-    while(!arquivo.eof()){
 
-        Imovel *imovel;
+    int cont;
+
+    for(cont = 0; cont < totalInt; cont++){
+
+        Imovel *imovel = new Imovel();
 
         Endereco en = Endereco();
         string descricao;
@@ -100,6 +118,12 @@ list<Imovel*> GerenciadorPersistencia::recuperaListaImoveis(){
         imovel->setImovelTipo(tI);
         imovel->setTipoOferta(tO);
         imovel->setValor(v);
+
+        cout<<imovel->getDescricao()<<endl;
+        cout<<imovel->getEndereco().getCidade()<<endl;
+        cout<<imovel->getTitulo()<<endl;
+        cout<<imovel->getValor()<<endl;
+        cout<<imovel->getTipoDeferta()<<endl;
 
         imoveis.push_back(imovel);
 

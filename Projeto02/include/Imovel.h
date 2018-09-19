@@ -22,8 +22,8 @@ class Imovel
         void setDescricao(std::string descricao);
         void setTitulo(std::string titulo);
         std::string getTitulo();
-        virtual void setDescricao()=0;
-        virtual std::string getDescricao() = 0;
+        void setDescricao();
+        std::string getDescricao();
 
     protected:
         int imovelTipo;

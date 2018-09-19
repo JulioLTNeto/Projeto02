@@ -34,13 +34,15 @@ int main()
     *apt = a;
     cout << "Hello world!" << endl;
     list<Imovel*> l;
-    cout<<ut.pesquisar("Papipapigrafo", "piGrs")<<endl;
+    cout<<ut.pesquisar("Papipapigrafo", "pigra")<<endl;
     cout << ut.maiuscula("Testé") << endl;
+    l.push_back(apt);
     l.push_back(apt);
     ut.getGerenciadorPersistencia().salvarImovel(l);
     list<Imovel*> lista = ut.getImoveis();
     for(Imovel* im:lista){
-      cout<<im->getTitulo() << "\n" <<endl;
+        cout << "Testandoo" << endl;
+        cout<<im->getTitulo() << "\n" <<endl;
     }
     return 0;
 }

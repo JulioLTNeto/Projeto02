@@ -22,6 +22,7 @@ void SistemaImobiliaria::cadastrarImovel(Imovel *imovel){
 
 std::list<std::string> SistemaImobiliaria::getDescricao(){
     std::list<std::string> lis;
+    int cont = 0;
     for(Imovel *im:lista){
         std::string desc = "Este(a) ";
         if(im->getImovelTipo() == 1){
@@ -33,7 +34,7 @@ std::list<std::string> SistemaImobiliaria::getDescricao(){
         if(im->getImovelTipo() == 3){
             desc = desc + " terreno";
         }
-        desc = desc + " está locarizado no bairro: " + im->getEndereco().getBairro() + "\ne na cidade:" + im->getEndereco().getCidade() + "\nEle esta disponivel para: ";
+        desc = desc + " está locarizado no bairro:" + im->getEndereco().getBairro() + "\nNa cidade:" + im->getEndereco().getCidade() + "\nEle esta disponivel para ";
         if(im->getTipoDeferta() == 1){
             desc = desc + " alugar";
         }
@@ -42,35 +43,43 @@ std::list<std::string> SistemaImobiliaria::getDescricao(){
         }
         if(im->getImovelTipo()==1){
 
-            int intervalo1 = 0;
-            int intervalo2 = 0;
-            int intervalo3 = 0;
-            int intervalo4 = 0;
+            int intervalo = 0;
 
             int tamanhoDescricao = im->getDescricao().length();
             int cont;
             desc = desc + "\nPosicionado ao ";
+
+            string numeroDeQuartos;
+            string valorCondominio;
+            string vagasGaragem;
+            string area;
+
             for(cont = 0; cont < tamanhoDescricao; cont++){
-                if(intervalo1 == 0 && im->getDescricao()[cont] == '/'){
-                    intervalo1 = cont;
+                if(im->getDescricao()[cont] == '/'){
+                    intervalo++;
+                    continue;
                 }
-                if(intervalo2 == 0 && im->getDescricao()[cont] == '/'){
-                    intervalo2 = cont;
-                }
-                if(intervalo3 == 0 && im->getDescricao()[cont] == '/'){
-                    intervalo3 = cont;
-                }
-                if(intervalo4 == 0 && im->getDescricao()[cont] == '/'){
-                    intervalo4 = cont;
-                }
-                if(intervalo1 == 0){
+                if(intervalo == 0){
                     desc = desc + im->getDescricao()[cont];
                 }
+                if(intervalo == 1){
+                    numeroDeQuartos = numeroDeQuartos+im->getDescricao()[cont];
+                }
+                if(intervalo == 2){
+                    valorCondominio = valorCondominio+im->getDescricao()[cont];
+                }
+                if(intervalo == 3){
+                    vagasGaragem = vagasGaragem+im->getDescricao()[cont];
+                }
+                if(intervalo == 4){
+                    area = area+im->getDescricao()[cont];
+                }
             }
+            desc = desc + "\ncom " + numeroDeQuartos + " quarto(s), \ncustando o condominio R$" + valorCondominio + " mensais\nO apartamento tem " + vagasGaragem + " vaga(s) na garagem, e tendo uma area total de " + area + " metros quadrados";
         }
         lis.push_back(desc);
     }
-    return desc;
+    return lis;
 }
 
 std::list<Imovel*> SistemaImobiliaria::getImoveisPorTipo(int tipo){
