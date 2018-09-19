@@ -33,7 +33,7 @@ void GerenciadorPersistencia::salvarImovel(list<Imovel*> lista){
      }
     arq.close();
     ofstream conf;
-    conf.open("imovel_Cfg.txt", ios::app);
+    conf.open("imovel_Cfg.txt");
     conf<<totalCadastrados;
     conf.close();
 }
