@@ -20,6 +20,8 @@ class Imovel
         int getTipoDeferta();
         Endereco getEndereco();
         void setDescricao(std::string descricao);
+        void setTitulo(std::string titulo);
+        std::string getTitulo();
         virtual void setDescricao()=0;
         virtual std::string getDescricao() = 0;
 
@@ -28,6 +30,7 @@ class Imovel
         double valor;
         int tipoDeOferta;
         std::string descricao;
+        std::string titulo;
         Endereco endereco;
 
     private:

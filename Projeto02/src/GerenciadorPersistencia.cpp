@@ -19,6 +19,7 @@ void GerenciadorPersistencia::salvarImovel(list<Imovel*> lista){
 
     for(Imovel *imovel:lista){
         arq<<imovel->getDescricao() << "\n";
+        arq<<imovel->getTitulo() << "\n";
         arq<<imovel->getEndereco().getBairro() << "\n";
         arq<<imovel->getEndereco().getCep() << "\n";
         arq<<imovel->getEndereco().getCidade() << "\n";
@@ -50,8 +51,10 @@ list<Imovel*> GerenciadorPersistencia::recuperaListaImoveis(){
         string logradouro;
         string cep;
         string numero;
+        string titulo;
 
         getline(arquivo, descricao);
+        getline(arquivo, titulo);
         getline(arquivo, bairro);
         getline(arquivo, cep);
         getline(arquivo, cidade);
@@ -87,6 +90,7 @@ list<Imovel*> GerenciadorPersistencia::recuperaListaImoveis(){
         val>>v;
 
         imovel->setDescricao(descricao);
+        imovel->setTitulo(titulo);
         en.setBairro(bairro);
         en.setCep(cep);
         en.setCidade(cidade);

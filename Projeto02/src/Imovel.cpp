@@ -41,6 +41,14 @@ void Imovel::setDescricao(std::string descricao){
     this->descricao = descricao;
 }
 
+void Imovel::setTitulo(std::string titulo){
+    this->titulo = titulo;
+}
+
+std::string Imovel::getTitulo(){
+    return titulo;
+}
+
 Endereco Imovel::getEndereco(){
     return endereco;
 }

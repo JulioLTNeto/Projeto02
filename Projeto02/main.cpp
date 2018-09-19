@@ -20,6 +20,7 @@ int main()
     Imovel *apt = new Apartamento();
 
     a.setEndereco(ende);
+    a.setTitulo("Titulo");
     a.setImovelTipo(1);
     a.setTipoOferta(1);
     a.setValor(40);
@@ -31,12 +32,15 @@ int main()
     a.setDescricao();
 
     *apt = a;
-
     cout << "Hello world!" << endl;
-    //ut.getGerenciadorPersistencia().salvarImovel(apt);
-    list<Imovel*> lista = ut.getGerenciadorPersistencia().recuperaListaImoveis();
+    list<Imovel*> l;
+    cout<<ut.pesquisar("Papipapigrafo", "piGrs")<<endl;
+    cout << ut.maiuscula("Testé") << endl;
+    l.push_back(apt);
+    ut.getGerenciadorPersistencia().salvarImovel(l);
+    list<Imovel*> lista = ut.getImoveis();
     for(Imovel* im:lista){
-        cout<<im->getDescricao() << "\n" <<endl;
+      cout<<im->getTitulo() << "\n" <<endl;
     }
     return 0;
 }
